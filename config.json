@@ -1,0 +1,18 @@
+{
+  "locals": {
+    "title": "3D printing in Riga",
+    "brand": "3D Printing"
+  },
+  "plugins": [
+    "wintersmith-livereload",
+    "./node_modules/wintersmith-stylus/"
+  ],
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "gfm": true,
+    "smartLists": true,
+    "smartypants": true
+  }
+}

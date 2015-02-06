@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "wintersmith": "~2.1.0",
+    "wintersmith-livereload": "~0.1.1"
+  }
+}

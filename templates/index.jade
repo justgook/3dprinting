@@ -1,0 +1,483 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    | !{ livereloadScript }
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title= locals.title
+    // Bootstrap Core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/agency.css', rel='stylesheet')
+    // Custom Fonts
+    link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+body#page-top.index
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.page-scroll(href='#page-top')= locals.brand
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#page-top')
+            li
+              a.page-scroll(href='#services') Services
+            li
+              a.page-scroll(href='#portfolio') Portfolio
+            li
+              a.page-scroll(href='#about') About
+            li
+              a.page-scroll(href='#team') Team
+    header
+      .container
+        .intro-text
+          .intro-lead-in Welcome To Our Studio!
+          .intro-heading It&apos;s Nice To Meet You
+          a.page-scroll.btn.btn-xl(href='#services') Tell Me More
+    // Services Section
+    section#services
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading Services
+            h3.section-subheading.text-muted We offer different kind of services
+        .row.text-center
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+            h4.service-heading 3D Printing
+            p.text-muted
+              | In 3D printing, additive processes are used, in which successive layers of material are laid down under computer control. These objects can be of almost any shape or geometry, and are produced from a 3D model or other electronic data source. A 3D printer is a type of industrial robot.
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-laptop.fa-stack-1x.fa-inverse
+            h4.service-heading Modeling
+            p.text-muted
+              | The manual modeling process of preparing geometric data for 3D computer graphics is similar to plastic arts such as sculpting.
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-lock.fa-stack-1x.fa-inverse
+            h4.service-heading Model Preparing
+            p.text-muted
+              | Before printing a 3D model from an STL file, it must first be examined for "manifold errors", this step being called the "fixup".
+
+        .row.text-center
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-lock.fa-stack-1x.fa-inverse
+            h4.service-heading Casting
+            p.text-muted
+              | Casting is a manufacturing process by which a liquid material is usually poured into a mold, which contains a hollow cavity of the desired shape, and then allowed to solidify.
+    // Portfolio Grid Section
+    section#portfolio.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading Portfolio
+            h3.section-subheading.text-muted Few ideas of what u can print
+        .row
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='images/portfolio/prototyping.jpg', alt='')
+            .portfolio-caption
+              h4 Prototyping
+              p.text-muted From on-screen to in-hand
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='img/portfolio/startup-framework.png', alt='')
+            .portfolio-caption
+              h4 Replacement Parts
+              p.text-muted Make small do-it-yourself repairs
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='img/portfolio/treehouse.png', alt='')
+            .portfolio-caption
+              h4 Education
+              p.text-muted Touch what You learning
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal4', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='img/portfolio/golden.png', alt='')
+            .portfolio-caption
+              h4 Gifts
+              p.text-muted Persinolize It
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal5', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='img/portfolio/escape.png', alt='')
+            .portfolio-caption
+              h4 Toys
+              p.text-muted Your Own design
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='images/portfolio/functional.jpg', alt='')
+            .portfolio-caption
+              h4 Functional
+              p.text-muted Easy to start
+
+
+          .col-md-4.col-sm-6.portfolio-item
+            a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
+              .portfolio-hover
+                .portfolio-hover-content
+                  i.fa.fa-plus.fa-3x
+              img.img-responsive(src='images/portfolio/interior.jpg', alt='')
+            .portfolio-caption
+              h4 Interior
+              p.text-muted Easy to start
+
+    // About Section
+    section#about
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading About
+            h3.section-subheading.text-muted How we grow up
+        .row
+          .col-lg-12
+            ul.timeline
+              li
+                .timeline-image
+                  img.img-circle.img-responsive(src='images/about/1.png', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2014/2Q
+                    h4.subheading Printer Assabled
+                    p.text-muted
+                      | Got all parts and assembly first priter
+              li.timeline-inverted
+                .timeline-image
+                  img.img-circle.img-responsive(src='images/about/2.png', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2014/3Q
+                    h4.subheading First Prints
+                  .timeline-body
+                    p.text-muted
+                      | Printer start printing, bad, uncalibrated - but PRINT
+              li
+                .timeline-image
+                  img.img-circle.img-responsive(src='images/about/3.png', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2014/4Q
+                    h4.subheading Calibration and Improvements
+                  .timeline-body
+                    p.text-muted
+                      | After few months of work, printer start printing as expeted and be able reprint all needed parts for it self
+              li.timeline-inverted
+                .timeline-image
+                  img.img-circle.img-responsive(src='images/about/4.png', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2015/1Q
+                    h4.subheading Go Commercial
+                  .timeline-body
+                    p.text-muted
+                      | When most of parts was reprinted, reassembled and calibrated to expected results and printer become print production-ready parts - we get to 3D-hubs and start accept first orders
+              li
+                .timeline-image
+                  img.img-circle.img-responsive(src='images/about/5.png', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2015/2Q
+                    h4.subheading New Printer
+                  .timeline-body
+                    p.text-muted
+                      | You should always strive for the best. So next printer will be improved
+              li.timeline-inverted
+                .timeline-image
+                  h4
+                    | To Be
+                    br
+                    | Continued
+
+    // Team Section
+    section#team.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading Our Amazing Team
+            h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-sm-6
+            .team-member
+              img.img-responsive.img-circle(src='images/team/roman.png', alt='')
+              h4 Roman
+              p.text-muted Lead Engineer
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-6
+            .team-member
+              img.img-responsive.img-circle(src='images/team/vineta.png', alt='')
+              h4 Vineta
+              p.text-muted Lead Marketer
+              ul.list-inline.social-buttons
+                li
+                  a(href='#')
+                    i.fa.fa-twitter
+                li
+                  a(href='#')
+                    i.fa.fa-facebook
+                li
+                  a(href='#')
+                    i.fa.fa-linkedin
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            p.large.text-muted
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+    // Clients Aside
+    aside.clients
+      .container
+        .row
+          .col-md-3.col-sm-6
+            a(href='#')
+              img.img-responsive.img-centered(src='images/logos/3dhubs.png', alt='')
+          .col-md-3.col-sm-6
+            a(href='#')
+              img.img-responsive.img-centered(src='images/logos/github.png', alt='')
+          //- .col-md-3.col-sm-6
+          //-   a(href='#')
+          //-     img.img-responsive.img-centered(src='img/logos/themeforest.jpg', alt='')
+          //- .col-md-3.col-sm-6
+          //-   a(href='#')
+          //-     img.img-responsive.img-centered(src='img/logos/creative-market.jpg', alt='')
+    footer
+      .container
+        .row
+          .col-md-4
+            span.copyright Copyright &copy; Your Website 2014
+          .col-md-4
+            ul.list-inline.social-buttons
+              li
+                a(href='#')
+                  i.fa.fa-twitter
+              li
+                a(href='#')
+                  i.fa.fa-facebook
+              li
+                a(href='#')
+                  i.fa.fa-linkedin
+          .col-md-4
+            ul.list-inline.quicklinks
+              li
+                a(href='#') Privacy Policy
+              li
+                a(href='#') Terms of Use
+    // Portfolio Modals
+    // Use the modals below to showcase details about your portfolio projects!
+    // Portfolio Modal 1
+    #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                // Project Details Go Here
+                h2 Prototyping
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive(src='img/portfolio/roundicons-free.png', alt='')
+                p
+                  | Take your 3D CAD designs from on-screen to in-hand with realistic 3D models. Test form, fit and function. Print assembly tools on the fly or manufacture small quantities of production parts. It’s all possible with 3D Printing.
+                p
+                  strong Want these icons in this portfolio item sample?
+                  | You can download 60 of them for free, courtesy of
+                  a(href='https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc') RoundIcons.com
+                  | , or you can purchase the 1500 icon set
+                  a(href='https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc') here
+                  | .
+                ul.list-inline
+                  li Date: July 2014
+                  li Client: Round Icons
+                  li Category: Graphic Design
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // Portfolio Modal 2
+    #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                h2 Project Heading
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive.img-centered(src='img/portfolio/startup-framework-preview.png', alt='')
+                p
+                  a(href='http://designmodo.com/startup/?u=787') Startup Framework
+                  |  is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.
+                p
+                  | You can preview Startup Framework
+                  a(href='http://designmodo.com/startup/?u=787') here
+                  | .
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // Portfolio Modal 3
+    #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                // Project Details Go Here
+                h2 Project Name
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive.img-centered(src='img/portfolio/treehouse-preview.png', alt='')
+                p
+                  | Treehouse is a free PSD web template built by
+                  a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                  | . This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.
+                p
+                  | You can download the PSD template in this portfolio sample item at
+                  a(href='http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/') FreebiesXpress.com
+                  | .
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // Portfolio Modal 4
+    #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                // Project Details Go Here
+                h2 Project Name
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive.img-centered(src='img/portfolio/golden-preview.png', alt='')
+                p
+                  | Start Bootstrap&apos;s Agency theme is based on Golden, a free PSD website template built by
+                  a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                  | . Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.
+                p
+                  | You can download the PSD template in this portfolio sample item at
+                  a(href='http://freebiesxpress.com/gallery/golden-free-one-page-web-template/') FreebiesXpress.com
+                  | .
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // Portfolio Modal 5
+    #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                // Project Details Go Here
+                h2 Project Name
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive.img-centered(src='img/portfolio/escape-preview.png', alt='')
+                p
+                  | Escape is a free PSD web template built by
+                  a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                  | . Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.
+                p
+                  | You can download the PSD template in this portfolio sample item at
+                  a(href='http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/') FreebiesXpress.com
+                  | .
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // Portfolio Modal 6
+    #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                // Project Details Go Here
+                h2 Project Name
+                p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                img.img-responsive.img-centered(src='img/portfolio/dreams-preview.png', alt='')
+                p
+                  | Dreams is a free PSD web template built by
+                  a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                  | . Dreams is a modern one page web template designed for almost any purpose. It&rsquo;s a beautiful template that&rsquo;s designed with the Bootstrap framework in mind.
+                p
+                  | You can download the PSD template in this portfolio sample item at
+                  a(href='http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/') FreebiesXpress.com
+                  | .
+                button.btn.btn-primary(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close Project
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='js/classie.js')
+    script(src='js/cbpAnimatedHeader.js')
+    // Custom Theme JavaScript
+    script(src='js/agency.js')
