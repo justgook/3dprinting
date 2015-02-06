@@ -7,6 +7,9 @@
     "wintersmith-livereload",
     "./node_modules/wintersmith-stylus/"
   ],
+  "stylus":{
+    "include css":true
+    },
   "jade": {
     "pretty": true
   },

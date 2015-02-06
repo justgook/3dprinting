@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- '0.10'
+script: npm run-script deploy
+env:
+  global:
+  - GH_REF: github.com/justgook/3dprinting.git
+  - secure: b49kP1zd70aBGYbk2Wf+EjAdBZpe0OvQW1wVaZWAy+fduOWmIM0Ii0DIdu4vXK2zegHxbrekNVD5XSTaxWryK4kbQX7YJ23Tx2WPiaut3/tSWNp/xDWp1HU1We3P3I9N2TfmOA4jd15bj+55eJbkm2O2tYfB8vvmTIJcwExZP7w=
