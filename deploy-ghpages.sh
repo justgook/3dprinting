@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf build || exit 0;
 #mkdir out;
-node build.js
+./node_modules/wintersmith/bin/wintersmith buil
 ( cd build
  git init
  git config user.name "Travis-CI"
